@@ -9,8 +9,9 @@ class Cat < ApplicationRecord
   validates :color, inclusion: COLORS
 
   def age
-    (Date.today - self.birthdate) / 365
+    # (Date.today - self.birthdate).to_i / 365
+    time_ago_in_words(self.birthdate)
   end
 
-
+  
 end

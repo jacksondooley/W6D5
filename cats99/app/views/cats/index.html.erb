@@ -1,0 +1,9 @@
+<h1> Cats Index </h1>
+
+
+<ul><%@cats.each do |cat|%>
+  <%= render 'catstuff', cat: cat %>
+  <br>
+  <%end%>
+
+</ul>
